@@ -27,7 +27,7 @@ Estes documento README tem como objetivo fornecer as informações necessárias 
 
 # 🎁 Extra
 
-Esses itens não são obrigatórios, porém desejados.
+Esses itens não obrigatórios, porém desejados.
 
 - Testes unitários
 - SEO
