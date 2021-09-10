@@ -58,7 +58,7 @@ Você deverá construir um projeto utilizando o layout proposto
 
 - A documentação da API está disponível a partir de uma collection para Postman (https://www.getpostman.com/apps) neste repositório. Para utilizar a collection, vá até o postman e import a colllection que está disponível neste repositório, assim você terá acesso as documentação da API.
 
-- **Servidor:** http://empresas.ioasys.com.br
+- **Servidor:** https://empresas.ioasys.com.br/api
 - **Versão da API:** v1
 - **Usuário de Teste:** testeapple@ioasys.com.br
 - **Senha de Teste:** 12341234
