@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { forwardRef, useState } from 'react';
 import Icon from '../Icon';
 import { FieldContainer, FieldInput, IconContainer } from './styles';
 import { Tooltip } from 'react-tippy';
 import { useTheme } from 'styled-components';
 
-function TextField({ error, icon, className, style, type, ...rest }) {
+function TextField({ error, icon, className, style, type, ...rest }, ref) {
     const [isUserPressingViewButton, setIsUserPressingViewButton] = useState(false);
 
     const theme = useTheme();
@@ -21,7 +21,7 @@ function TextField({ error, icon, className, style, type, ...rest }) {
         <FieldContainer className={className} style={style} hasError={!!error}>
             {icon && <IconContainer>{icon}</IconContainer>}
 
-            <FieldInput maxLength={255} {...rest} type={getFieldType()} />
+            <FieldInput maxLength={255} {...rest} type={getFieldType()} ref={ref} novalidate />
 
             {!!error && (
                 <Tooltip title={error} position='top'>
@@ -55,4 +55,4 @@ function TextField({ error, icon, className, style, type, ...rest }) {
     );
 }
 
-export default TextField;
+export default forwardRef(TextField);

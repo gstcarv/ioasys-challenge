@@ -3,11 +3,14 @@ import { ThemeProvider } from 'styled-components';
 import GlobalStyle from './config/globalStyles';
 import BaseRoutes from './config/routes/BaseRoutes';
 import { theme } from './config/theme';
+import { AuthProvider } from './contexts/AuthContext';
 
 function App() {
     return (
         <ThemeProvider theme={theme}>
-            <BaseRoutes />
+            <AuthProvider>
+                <BaseRoutes />
+            </AuthProvider>
 
             <GlobalStyle />
         </ThemeProvider>

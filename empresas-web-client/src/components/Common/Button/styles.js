@@ -13,7 +13,9 @@ export const ButtonContainer = styled.button`
     font-weight: 500;
     border: none;
     cursor: pointer;
-    transition: background-color 0.1s;
+    opacity: ${(props) => (props.disabled ? 0.5 : 1)};
+    pointer-events: ${(props) => (props.disabled ? 'none' : 'initial')};
+    transition: background-color 0.1s, opacity 0.1s;
 
     :hover {
         background-color: ${({ theme }) => darken(0.08, theme.colors.greenyBlue)};
