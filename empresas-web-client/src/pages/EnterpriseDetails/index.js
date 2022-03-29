@@ -30,16 +30,19 @@ function EnterpriseDetails() {
                 <PageSpacedContainer>
                     <DetailsContainer>
                         {!data?.enterprise && (
-                            <>
+                            <div data-testid='enterprise-loading-skeleton'>
                                 <Skeleton height={270} style={{ marginBottom: 30 }} />
 
                                 <Skeleton count={20} />
-                            </>
+                            </div>
                         )}
 
                         {data?.enterprise && (
                             <>
-                                <EnterpriseImage src={`${baseDomain}${data.enterprise.photo}`} />
+                                <EnterpriseImage
+                                    src={`${baseDomain}/${data.enterprise.photo}`}
+                                    alt='Imagem da Empresa'
+                                />
 
                                 <EnterpriseDescription>{data.enterprise.description}</EnterpriseDescription>
                             </>

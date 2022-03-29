@@ -16,7 +16,7 @@ function EnterpriseCard({ enterpriseData: { photo, enterprise_type, country, ent
 
     return (
         <Container onClick={() => navigate(`enterprise/${id}`)} data-testid='enterprise-card'>
-            <EnterpriseImage src={baseDomain + photo} />
+            <EnterpriseImage src={`${baseDomain}/${photo}`} />
 
             <EnterpriseInformation>
                 <EnterpriseTitle>{enterprise_name}</EnterpriseTitle>
