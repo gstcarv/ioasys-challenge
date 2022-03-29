@@ -6,7 +6,7 @@ export const EnterpriseService = {
      * @param id enterprise's identification
      * @returns full enterprise data
      */
-    getById: (id) => api.get('enterprises' + id),
+    getById: (id) => api.get('enterprises/' + id),
 
     /**
      * Search enterprises by its name

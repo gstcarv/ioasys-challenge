@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import useSWR from 'swr';
 import { SearchResultsContainer, NoResultsMessage, CenterContainer, EmptySearchMessage } from './styles';
 import EnterpriseCard from './EnterpriseCard';

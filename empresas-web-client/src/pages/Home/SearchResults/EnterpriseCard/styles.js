@@ -19,7 +19,6 @@ export const Container = styled.div`
     }
 
     @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-        flex-direction: column;
         height: 150px;
     }
 `;

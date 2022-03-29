@@ -9,9 +9,13 @@ import {
     EnterpriseCountry,
 } from './styles';
 
-function EnterpriseCard({ enterpriseData: { photo, enterprise_type, country, enterprise_name } }) {
+import { useNavigate } from 'react-router-dom';
+
+function EnterpriseCard({ enterpriseData: { photo, enterprise_type, country, enterprise_name, id } }) {
+    const navigate = useNavigate();
+
     return (
-        <Container>
+        <Container onClick={() => navigate(`enterprise/${id}`)} data-testid='enterprise-card'>
             <EnterpriseImage src={baseDomain + photo} />
 
             <EnterpriseInformation>
