@@ -23,4 +23,10 @@ export const theme = {
     spacing: [2, 4, 8, 12, 16, 24, 32, 44, 64, 72],
 
     radii: [2, 4, 6, 8, 16, 32],
+
+    breakpoints: {
+        sm: '576px',
+        md: '768px',
+        lg: '992px',
+    },
 };

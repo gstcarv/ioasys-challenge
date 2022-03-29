@@ -7,6 +7,10 @@ export const AuthFormContainer = styled.form`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+        width: 80%;
+    }
 `;
 
 export const LoginErrorLabel = styled.span`

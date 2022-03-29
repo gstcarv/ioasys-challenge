@@ -8,21 +8,39 @@ export const Container = styled.div`
     margin-bottom: ${(props) => props.theme.spacing[7]}px;
     cursor: pointer;
     transition: 0.1s;
-    height: 150px;
+    flex-wrap: wrap;
 
     :hover {
         background-color: #f2f2f2;
+    }
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+        flex-direction: column;
+    }
+
+    @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+        flex-direction: column;
+        height: 150px;
     }
 `;
 
 export const EnterpriseImage = styled.img`
     width: 250px;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+        width: 100%;
+    }
 `;
 
 export const EnterpriseInformation = styled.div`
     display: flex;
     flex-direction: column;
     margin-left: ${(props) => props.theme.spacing[6]}px;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+        margin-left: 0;
+        margin: ${(props) => props.theme.spacing[5]}px 0;
+    }
 `;
 
 export const EnterpriseTitle = styled.span`
