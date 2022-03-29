@@ -7,5 +7,5 @@ export const UserService = {
      * @param password user's password
      * @returns user auth information
      */
-    login: (email, password) => api.post('users/auth/sign_in', { email, password }),
+    login: (email, password) => api.post('/users/auth/sign_in', { email, password }),
 };
