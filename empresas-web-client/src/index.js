@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'react-tippy/dist/tippy.css';
+import 'react-loading-skeleton/dist/skeleton.css';
 
 ReactDOM.render(
     <React.StrictMode>

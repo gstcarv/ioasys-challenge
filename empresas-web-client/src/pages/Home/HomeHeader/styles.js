@@ -6,7 +6,6 @@ export const Container = styled(GradientHeader)`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20%;
 `;
 
 export const SearchField = styled(TextField)`

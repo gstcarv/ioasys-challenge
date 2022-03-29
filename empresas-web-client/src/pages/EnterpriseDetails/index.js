@@ -2,8 +2,8 @@ import React from 'react';
 
 // import { Container } from './styles';
 
-function CompanyDetails() {
+function EnterpriseDetails() {
     return <div />;
 }
 
-export default CompanyDetails;
+export default EnterpriseDetails;

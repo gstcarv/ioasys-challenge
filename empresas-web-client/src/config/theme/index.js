@@ -13,10 +13,9 @@ export const theme = {
             500: '#383743',
         },
         rouge: '#ee4c77',
-
         neonRed: '#ff0f44',
-
         greenyBlue: '#57bbbc',
+        darkIndigo: '#1a0e49',
     },
 
     fontSize: [12, 14, 16, 18, 20, 22, 26, 30, 34],

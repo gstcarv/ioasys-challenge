@@ -3,7 +3,7 @@ import PrivateRoute from './PrivateRoute';
 
 import Login from '../../pages/Login';
 import Home from '../../pages/Home';
-import CompanyDetails from '../../pages/CompanyDetails';
+import EnterpriseDetails from '../../pages/EnterpriseDetails';
 
 function BaseRoutes() {
     return (
@@ -13,7 +13,7 @@ function BaseRoutes() {
 
                 <Route path='/' element={<PrivateRoute />}>
                     <Route path='/' element={<Home />} />
-                    <Route path='/company/:id' element={<CompanyDetails />} />
+                    <Route path='/enterprise/:id' element={<EnterpriseDetails />} />
                 </Route>
 
                 <Route path='*' element={<Navigate to='/' />} />

@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import { darken } from 'polished';
+import { PageSpacedContainer } from '../../config/globalStyles';
 
-export const Container = styled.header`
+export const Container = styled(PageSpacedContainer)`
     height: 80px;
     background: linear-gradient(
         180deg,

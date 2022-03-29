@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import WhiteLogo from '../../assets/images/logo-white.png';
-import { Icon } from '../../components/Common';
 import HomeHeader from './HomeHeader';
+import SearchResults from './SearchResults';
+import { Container } from './styles';
 
 function Home() {
     const [isSearching, setIsSearching] = useState(false);
@@ -9,9 +9,11 @@ function Home() {
     const [searchValue, setSearchValue] = useState('');
 
     return (
-        <div>
+        <Container>
             <HomeHeader searchValue={searchValue} onSearch={setSearchValue} />
-        </div>
+
+            <SearchResults search={searchValue} />
+        </Container>
     );
 }
 
