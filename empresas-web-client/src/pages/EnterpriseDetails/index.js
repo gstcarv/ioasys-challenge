@@ -1,17 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import EnterpriseHeader from './EnterpriseHeader';
 import { DetailsContainer, EnterpriseDescription, EnterpriseImage } from './styles';
 import { PageSpacedContainer } from '../../config/globalStyles';
-import { Navigate, useParams } from 'react-router-dom';
+import { Navigate, useLocation, useParams } from 'react-router-dom';
 import useSWR from 'swr';
 import { EnterpriseService } from '../../services/enterprise';
 import { baseDomain } from '../../services';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
-import { useTheme } from 'styled-components';
 import { darken } from 'polished';
 
 function EnterpriseDetails() {
     const { id } = useParams();
+
+    const { pathname } = useLocation();
+
+    useEffect(() => window.scrollTo(0, 0), [pathname]);
 
     const { data } = useSWR(['enterprise', id], async () => (await EnterpriseService.getById(id)).data);
 
