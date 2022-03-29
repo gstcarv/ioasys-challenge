@@ -1,4 +1,4 @@
-import { AES } from 'crypto-js';
+import CryptoJS, { AES } from 'crypto-js';
 
 const cryptKey = '🚀';
 const authStorageKey = '@auth';

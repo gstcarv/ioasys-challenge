@@ -4,7 +4,7 @@ import { FieldContainer, FieldInput, IconContainer } from './styles';
 import { Tooltip } from 'react-tippy';
 import { useTheme } from 'styled-components';
 
-function TextField({ error, icon, className, style, type, ...rest }, ref) {
+function TextField({ error, icon, className, style, type, rightIcon, ...rest }, ref) {
     const [isUserPressingViewButton, setIsUserPressingViewButton] = useState(false);
 
     const theme = useTheme();
@@ -28,6 +28,8 @@ function TextField({ error, icon, className, style, type, ...rest }, ref) {
                     <Icon.Warning color='red' size={25} data-testid='field-error-icon' />
                 </Tooltip>
             )}
+
+            {rightIcon}
 
             {type === 'password' && !error && (
                 <div

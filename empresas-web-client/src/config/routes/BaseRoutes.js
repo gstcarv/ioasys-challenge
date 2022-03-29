@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import PrivateRoute from './PrivateRoute';
 
 import Login from '../../pages/Login';
 import Home from '../../pages/Home';
@@ -10,8 +11,12 @@ function BaseRoutes() {
             <Routes>
                 <Route path='/login' element={<Login />} />
 
-                <Route path='/' element={<Home />} />
-                <Route path='/company/:id' element={<CompanyDetails />} />
+                <Route path='/' element={<PrivateRoute />}>
+                    <Route path='/' element={<Home />} />
+                    <Route path='/company/:id' element={<CompanyDetails />} />
+                </Route>
+
+                <Route path='*' element={<Navigate to='/' />} />
             </Routes>
         </BrowserRouter>
     );

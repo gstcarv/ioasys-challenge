@@ -12,10 +12,7 @@ export const theme = {
             400: '#403e4d',
             500: '#383743',
         },
-        rouge: {
-            500: '#ee4c77',
-            700: '#991237',
-        },
+        rouge: '#ee4c77',
 
         neonRed: '#ff0f44',
 

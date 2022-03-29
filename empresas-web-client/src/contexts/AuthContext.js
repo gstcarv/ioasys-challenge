@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useEffect, useState } from 'react';
 import { UserService } from '../services/user';
 import { UserStorage } from '../utils/storage/userStorage';
 
@@ -6,6 +6,11 @@ const AuthContext = createContext({});
 
 export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
+
+    useEffect(() => {
+        console.log(UserStorage.getLoginInformation());
+        setUser(UserStorage.getLoginInformation());
+    }, []);
 
     async function signIn(email, password) {
         const userLogin = await UserService.login(email, password);
