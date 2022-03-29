@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import useSWR from 'swr';
 import { SearchResultsContainer, NoResultsMessage, CenterContainer, EmptySearchMessage } from './styles';
 import EnterpriseCard from './EnterpriseCard';
-import { EnterpriseService } from '../../../services/entreprise';
+import { EnterpriseService } from '../../../services/enterprise';
 import { useDebounce } from 'use-debounce';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import { useTheme } from 'styled-components';

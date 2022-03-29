@@ -4,7 +4,7 @@ import { DetailsContainer, EnterpriseDescription, EnterpriseImage } from './styl
 import { PageSpacedContainer } from '../../config/globalStyles';
 import { Navigate, useParams } from 'react-router-dom';
 import useSWR from 'swr';
-import { EnterpriseService } from '../../services/entreprise';
+import { EnterpriseService } from '../../services/enterprise';
 import { baseDomain } from '../../services';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import { useTheme } from 'styled-components';
