@@ -16,6 +16,8 @@ export const UserStorage = {
     getLoginInformation() {
         const cryptedAuth = localStorage.getItem(authStorageKey);
 
+        if (!cryptedAuth) return null;
+
         const decryptBytes = CryptoJS.AES.decrypt(cryptedAuth, cryptKey);
         return JSON.parse(decryptBytes.toString(CryptoJS.enc.Utf8));
     },

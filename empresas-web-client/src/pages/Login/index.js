@@ -7,9 +7,9 @@ import { Navigate } from 'react-router-dom';
 
 function Login() {
     const [isLogging, setIsLogging] = useState(false);
-    const auth = useAuth();
+    const { user } = useAuth();
 
-    if (auth) {
+    if (user) {
         return <Navigate to={'/'} />;
     }
 

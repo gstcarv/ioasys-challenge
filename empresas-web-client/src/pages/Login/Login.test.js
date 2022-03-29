@@ -2,7 +2,7 @@ import Login from '.';
 import { render, renderWithRouter } from '../../utils/tests';
 
 describe('<Login />', () => {
-    test.skip('should render with greeting texts', () => {
+    test('should render with greeting texts', () => {
         const { getByText } = renderWithRouter(<Login />);
 
         expect(getByText('Bem-vindo ao empresas')).toBeInTheDocument();
