@@ -8,7 +8,13 @@ function Home() {
 
     return (
         <Container>
-            <HomeHeader searchValue={searchValue} onSearch={setSearchValue} />
+            <HomeHeader
+                searchValue={searchValue}
+                onSearch={(search) => {
+                    sessionStorage.setItem('search', search);
+                    setSearchValue(search);
+                }}
+            />
 
             <SearchResults search={searchValue} />
         </Container>

@@ -4,7 +4,7 @@ import { Icon } from '../../../components/Common';
 import { Container, SearchField } from './styles';
 
 function HomeHeader({ searchValue, onSearch }) {
-    const [isSearching, setIsSearching] = useState(!!sessionStorage.getItem('search'));
+    const [isSearching, setIsSearching] = useState(!!searchValue);
 
     return (
         <Container>
@@ -28,10 +28,7 @@ function HomeHeader({ searchValue, onSearch }) {
                     placeholder='Pesquisar'
                     icon={<Icon.Search width={35} />}
                     value={searchValue}
-                    onChange={(e) => {
-                        sessionStorage.setItem('search', e.target.value);
-                        onSearch(e.target.value);
-                    }}
+                    onChange={(e) => onSearch(e.target.value)}
                     rightIcon={
                         <Icon.Close
                             width={35}
