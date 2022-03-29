@@ -4,9 +4,7 @@ import SearchResults from './SearchResults';
 import { Container } from './styles';
 
 function Home() {
-    const [isSearching, setIsSearching] = useState(false);
-
-    const [searchValue, setSearchValue] = useState('');
+    const [searchValue, setSearchValue] = useState(sessionStorage.getItem('search') || '');
 
     return (
         <Container>

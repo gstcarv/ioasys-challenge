@@ -3,6 +3,8 @@ import HomeHeader from '.';
 import { render } from '../../../utils/tests';
 
 describe('<HomeHeader />', () => {
+    beforeEach(() => sessionStorage.setItem('search', ''));
+
     test('should render logo and search', () => {
         const { getByTestId } = render(<HomeHeader />);
 
