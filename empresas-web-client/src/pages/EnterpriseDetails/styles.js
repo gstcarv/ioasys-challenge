@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { PageSpacedContainer } from '../../config/globalStyles';
 
 export const DetailsContainer = styled.div`
     background-color: #fff;
@@ -7,6 +6,10 @@ export const DetailsContainer = styled.div`
     padding: ${({ theme }) => theme.spacing[8]}px;
     margin-top: ${({ theme }) => theme.spacing[7]}px;
     margin-bottom: ${(props) => props.theme.spacing[6]}px;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+        padding: ${({ theme }) => theme.spacing[5]}px;
+    }
 `;
 
 export const EnterpriseImage = styled.img`
@@ -20,4 +23,9 @@ export const EnterpriseDescription = styled.p`
     font-weight: normal;
     margin-bottom: ${(props) => props.theme.spacing[2]}px;
     line-height: 28px;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+        font-size: ${({ theme }) => theme.fontSize[3]}px;
+        line-height: 24px;
+    }
 `;
